@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+void leftAlignedPattern(char pattern, int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            cout << pattern;
+        }
+        cout << endl;
+    }
+}
+int main()
+{
+    char pattern;
+    int size;
+    cout << "Enter a symbol: " << endl;
+    cin >> pattern;
+    cout << "Enter the height of the triangle: " << endl;
+    cin >> size;
+    cout << endl;
+    cout << "Here is your pattern: " << endl;
+    leftAlignedPattern(pattern, size);
+}
