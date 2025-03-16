@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+void rightAlignedPattern(int size, char pattern)
+{
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
+            if (j < size - i - 1)
+            {
+                cout << " ";
+            }
+            else
+            {
+                cout << pattern;
+            }
+        }
+        cout << endl;
+    }
+}
+int main()
+{
+    int size;
+    char pattern;
+    cout << "Enter a number" << endl;
+    cin >> size;
+    cout << "Enter the pattern Style" << endl;
+    cin >> pattern;
+    cout << endl;
+    rightAlignedPattern(size, pattern);
+}
