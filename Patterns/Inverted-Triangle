@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+void printinvertedTriangle(int size, char pattern)
+{
+    int columns = size * 2 - 1;
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+
+            // if (i + j >= 2 * i && i + j < columns)  Brute Force Approach
+            if (j >= i && j < columns - i)
+            {
+                cout << pattern;
+            }
+            else
+                cout << " ";
+        }
+        cout << endl;
+    }
+}
+int main()
+{
+    int size;
+    char pattern;
+    cout << "Enter the size of the triangle" << endl;
+    cin >> size;
+    cout << "Enter the pattern type" << endl;
+    cin >> pattern;
+    cout << "Your pattern is: \n"
+         << endl;
+    printinvertedTriangle(size, pattern);
+}
