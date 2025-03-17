@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+void printBoxPattern(int height, char pattern)
+{
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < height; j++)
+        {
+            if (i == 0 || i == height - 1 || j == 0 || j == height - 1)
+            {
+                cout << pattern;
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+}
+int main()
+{
+    int height;
+    char pattern;
+    cout << "Enter the height of the pattern: " << endl;
+    cin >> height;
+    cout << "Enter the pattern type: " << endl;
+    cin >> pattern;
+    printBoxPattern(height, pattern);
+}
