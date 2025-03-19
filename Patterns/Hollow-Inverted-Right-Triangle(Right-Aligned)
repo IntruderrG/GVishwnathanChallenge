@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+void hollowInvertedRightAlignedRightAngle(int size, char pattern)
+{
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
+
+            if (j == size - 1 || j == i || i == 0)
+            {
+                cout << pattern;
+            }
+            else
+                cout << " ";
+        }
+        cout << endl;
+    }
+}
+int main()
+{
+    int size;
+    char pattern;
+    cout << "Enter the size of the triangle" << endl;
+    cin >> size;
+    cout << "Enter the pattern type" << endl;
+    cin >> pattern;
+    cout << "Your pattern is: \n"
+         << endl;
+    hollowInvertedRightAlignedRightAngle(size, pattern);
+}
