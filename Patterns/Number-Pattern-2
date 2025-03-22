@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+void spacedTriangle(int size)
+{
+    int cols = 2 * size;
+
+    for (int i = 1; i <= size; i++)
+    {
+        for (int j = 1; j <= cols; j++)
+        {
+
+            if (j >= i + 1 && j <= cols - i)
+            {
+                cout << " ";
+            }
+            else
+                cout << (j <=cols / 2 ? j : cols - j+1);
+
+        }
+        cout << endl;
+    }
+}
+int main()
+{
+    int size;
+    cout << "Enter the size of the triangle" << endl;
+    cin >> size;
+    cout << "Your pattern is: \n"
+         << endl;
+    spacedTriangle(size);
+}
