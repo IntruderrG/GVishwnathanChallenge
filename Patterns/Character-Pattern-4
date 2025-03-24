@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+void charCenterTriangle(int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < 2 * size - 1; j++)
+        {
+            char ch = 'A' + i;
+
+            if (j >= size - 1 - i && j <= size - 1 + i)
+            {
+                int str = abs(size - 1 - j);
+                cout << (char)(ch - str);
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int size;
+    cout << "Enter the size of the triangle: ";
+    cin >> size;
+
+    cout << "Your pattern is: \n"
+         << endl;
+    charCenterTriangle(size);
+
+    return 0;
+}
