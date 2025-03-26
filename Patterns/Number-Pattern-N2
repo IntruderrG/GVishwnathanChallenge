@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+void printTriangle(int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < 2 * size - 1; j++)
+        {
+            if (j >= size - 1 - i && j <= size - 1 + i)
+            {
+                int offset = j - size + 1;
+                offset = (offset > 0) ? -offset : offset;
+                cout << i + 1 + offset;
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+}
+int main()
+{
+    int size;
+    cout << "Enter the size of the pattern" << endl;
+    cin >> size;
+    printTriangle(size);
+    return 0;
+}
