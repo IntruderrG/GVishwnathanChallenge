@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int checkLength(int number)
+{
+    int length = floor(log10(number)) + 1;
+    return length;
+}
+int findArmstrong(int number)
+{
+    int length = checkLength(number);
+    int sum = 0;
+    while (number > 0)
+    {
+        int dig = number % 10;
+        sum = sum + pow(dig, length);
+        number = number / 10;
+    }
+    return sum;
+}
+int main()
+{
+    int number;
+    cout << "Enter the number" << endl;
+    cin >> number;
+    int armNumber = findArmstrong(number);
+    cout << ((armNumber == number) ? "Armstrong Number" : "Normal Number");
+}
