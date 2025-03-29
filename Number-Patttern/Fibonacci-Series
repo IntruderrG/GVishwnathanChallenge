@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+void calculateFibonacciSeries(int size)
+{
+    int a = 0;
+    int b = 1;
+    cout << 0 << ", " << 1 << ", ";
+    for (int i = 2; i < size; i++)
+    {
+        int sum = a + b;
+        a = b;
+        b = sum;
+        cout << sum << ", ";
+    }
+}
+int main()
+{
+
+    int size;
+    cout << "Enter the size of the series" << endl;
+    cin >> size;
+    calculateFibonacciSeries(size);
+}
