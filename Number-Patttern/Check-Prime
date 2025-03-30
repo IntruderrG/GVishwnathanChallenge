@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int number;
+    int isPrimee = 1;
+    cout << "Enter the number that needs to be checked for prime" << endl;
+    cin >> number;
+    if (number == 0 || number == 1)
+    {
+        isPrimee = 2;
+    }
+    else
+    {
+        for (int i = 2; i < number; i++)
+        {
+            if (number % i == 0 && isPrimee == 1)
+            {
+                isPrimee = 0;
+                break;
+            }
+        }
+    }
+    if (isPrimee == 1)
+    {
+        cout << "Prime Number" << endl;
+    }
+    else if (isPrimee == 2)
+    {
+        cout << "Neither Prime Nor Composite" << endl;
+    }
+    else
+    {
+        cout << "Composite Number" << endl;
+    }
+
+    // METHOD-2
+    cout << "METHOD-2" << endl;
+    int isPrime = 1;
+    for (int i = 2; i * i <= number; i++)
+    {
+        if (number % i == 0)
+        {
+            isPrime = 0;
+        }
+    }
+    if (isPrime)
+    {
+        cout << "Prime Number" << endl;
+    }
+    else
+    {
+        cout << "Composite Number" << endl;
+    }
+    return 0;
+}
