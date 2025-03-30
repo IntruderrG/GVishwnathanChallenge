@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    // METHOD-1
+    // long n;
+    // long sum = 0;
+    // cout << "Enter the range of the numbers that needs to be printed " << endl;
+    // cin >> n;
+    // long temp = n;
+    // while (n > 0)
+    // {
+    //     sum = sum + n;
+    //     n--;
+    // }
+    // cout << "The sum of the given " << temp << " natural numbers is: " << sum << endl;
+
+    // METHOD-2 Faster Method using the formula
+    long number;
+    cout << "Enter the natural number whose sum you want " << endl;
+    cin >> number;
+    long result = (number * (number + 1)) / 2;
+    cout << "The result is: " << result << endl;
+}
