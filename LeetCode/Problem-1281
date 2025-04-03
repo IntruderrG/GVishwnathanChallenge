@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+class Solution {
+public:
+    int subtractProductAndSum(int n) {
+        int sum = 0;
+        int prod = (n == 0) ? 0 : 1;
+        while (n > 0) {
+            int dig = n % 10;
+            sum += dig;
+            prod *= dig;
+            n /= 10;
+        }
+        return prod - sum;
+    }
+};
+
+int main() {
+    int n;
+    cout << "Enter an integer: ";
+    cin >> n;
+    
+    Solution solution;
+    int result = solution.subtractProductAndSum(n);
+    cout << "Result: " << result << endl;
+    
+    return 0;
+}
