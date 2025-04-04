@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int getDecimal(int n)
+{
+    int i=0,num=0;
+    while(n!=0)
+    {
+        int dig=n%10;
+        num=dig*pow(2,i)+num;
+        i++;
+        n=n/10;
+    }
+    return num;
+}
+int main() {
+    int inp;
+    cout<<"Enter Binary Number, We will Convert it to Decimal for you"<<endl;
+    cin>>inp;
+    int res=getDecimal(inp);
+    cout<<"Decimal of: "<<inp<<" is: "<<res<<endl;
+    return 0;
+}
