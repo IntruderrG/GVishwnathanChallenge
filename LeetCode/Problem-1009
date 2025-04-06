@@ -1,0 +1,30 @@
+class Solution {
+public:
+    int convertDecimal(int n)
+    {
+        int i=0;
+        int decimalNumber=0;
+        while(n!=0)
+        {
+            int dig=n%10;
+            decimalNumber=dig*pow(2,i)+decimalNumber;
+            i++;
+            n=n/10;
+        }
+        return decimalNumber;
+    }
+    int bitwiseComplement(int n) {
+        int i=0;
+        int complementNumber=0;
+        while(n!=0)
+        {
+            int dig=n&1;
+            dig=(dig==1)?0:1;
+            complementNumber=dig*pow(10,i)+complementNumber;
+            i++;
+            n=n>>1;
+        }
+        int result=convertDecimal(complementNumber);
+        return result;
+    }
+};
