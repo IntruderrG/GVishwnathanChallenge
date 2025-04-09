@@ -1,0 +1,28 @@
+#include <iostream>
+bool isPowerOfTwo(int n) {
+    if (n <= 0) return false;
+
+    int mask = 1;
+    int copy = n;
+
+    while (copy > 1) {
+        mask = mask << 1;
+        copy = copy >> 1;
+    }
+
+    int result = n & mask;
+    return (result == n);
+}
+
+int main() {
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+
+    if (isPowerOfTwo(n))
+        cout << n << " is a power of two." << endl;
+    else
+        cout << n << " is not a power of two." << endl;
+
+    return 0;
+}
