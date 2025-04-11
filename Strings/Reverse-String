@@ -16,5 +16,4 @@ int main() {
     reverseString(str);
     
     cout << "Reversed String: " << str << endl;
-    return 0;
 }
