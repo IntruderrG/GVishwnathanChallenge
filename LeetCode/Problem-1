@@ -10,7 +10,7 @@ public:
                 if(nums[i] + nums[j] == target) {
                     arr.push_back(i);
                     arr.push_back(j);
-                    return arr;
+                    return arr;//returns array as soon as the result is found
                 }
             }
         }
